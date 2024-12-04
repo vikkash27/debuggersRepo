@@ -5,12 +5,14 @@ import time
 KEY = "AIzaSyA3dsSFAb8rvjSBdZ__WLDYwhTYKEfWpNw"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent"
 
+
+name = input("What is your name? ")
 # Sample Archetype Prompts
 archetype_prompts = {
-    "Backend Sage": "Create a story in less than 100 words where a Backend Sage must debug a mythical API that controls an ancient city's defenses.",
-    "Frontend Sorcerer": "Write a story in less than 100 words about a Frontend Sorcerer who is designing an enchanted interface to help citizens navigate a magical library.",
-    "DevOps Monk": "Tell a story in less than 100 words where a DevOps Monk is tasked with maintaining the flow of a mystical CI/CD pipeline that powers a kingdom.",
-    "QA Rogue": "Generate a story in less than 100 words where a QA Rogue must track down a critical bug hidden in a sprawling forest of code."
+    "Backend Sage": f"Create a story in less than 50 words where a Backend Sage must debug a mythical API that controls an ancient city's defenses. my player's name is {name}.",
+    "Frontend Sorcerer": f"Write a story in less than 50 words about a Frontend Sorcerer who is designing an enchanted interface to help citizens navigate a magical library.with the name of {name}",
+    "DevOps Monk": f"Tell a story in less than 50 words where a DevOps Monk is tasked with maintaining the flow of a mystical CI/CD pipeline that powers a kingdom.with the name of {name}",
+    "QA Rogue": f"Generate a story in less than 50 words where a QA Rogue must track down a critical bug hidden in a sprawling forest of code.with the name of {name}"
 }
 
 # Function to simulate a typing effect
@@ -82,7 +84,6 @@ def present_scenario(player, level):
         return False
     return True
 
-name = input("What is your name? ")
 # Main game loop
 def game_loop():
     player = {
