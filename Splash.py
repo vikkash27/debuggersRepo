@@ -6,13 +6,37 @@ KEY = "AIzaSyA3dsSFAb8rvjSBdZ__WLDYwhTYKEfWpNw"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent"
 
 
+print("""
+============================================================
+███████╗██╗   ██╗███╗   ██╗████████╗ █████╗ ██╗  ██╗       
+██╔════╝██║   ██║████╗  ██║╚══██╔══╝██╔══██╗╚██╗██╔╝       
+█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████║ ╚███╔╝        
+██╔══╝  ██║   ██║██║╚██╗██║   ██║   ██╔══██║ ██╔██╗        
+██║     ╚██████╔╝██║ ╚████║   ██║   ██║  ██║██╔╝ ██╗       
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝       
+------------------------------------------------------------
+                 Welcome to **Syntax Saga**                  
+        An RPG Adventure Through the World of Code!          
+============================================================
+
+            🌟 Choose Your Developer Archetype 🌟
+                🌐 Your Journey Awaits... 🌐
+------------------------------------------------------------
+ [New Game]          [Load Game]          [Settings]
+      
+""")
+
 name = input("What is your name? ")
+archetype = input("""
+                  Choose your developer archetype:
+                   [Backend Sage, Frontend Sorcerer, DevOps Monk, QA Rogue] 
+                  """)
 # Sample Archetype Prompts
 archetype_prompts = {
     "Backend Sage": f"Create a story in less than 50 words where a Backend Sage must debug a mythical API that controls an ancient city's defenses. my player's name is {name}.",
-    "Frontend Sorcerer": f"Write a story in less than 50 words about a Frontend Sorcerer who is designing an enchanted interface to help citizens navigate a magical library.with the name of {name}",
-    "DevOps Monk": f"Tell a story in less than 50 words where a DevOps Monk is tasked with maintaining the flow of a mystical CI/CD pipeline that powers a kingdom.with the name of {name}",
-    "QA Rogue": f"Generate a story in less than 50 words where a QA Rogue must track down a critical bug hidden in a sprawling forest of code.with the name of {name}"
+    "Frontend Sorcerer": f"Write a story in less than 50 words about a Frontend Sorcerer who is designing an enchanted interface to help citizens navigate a magical library. my player's name is {name}",
+    "DevOps Monk": f"Tell a story in less than 50 words where a DevOps Monk is tasked with maintaining the flow of a mystical CI/CD pipeline that powers a kingdom. my player's name is {name}",
+    "QA Rogue": f"Generate a story in less than 50 words where a QA Rogue must track down a critical bug hidden in a sprawling forest of code.with the name of my player's name is {name}"
 }
 
 # Function to simulate a typing effect
@@ -88,7 +112,7 @@ def present_scenario(player, level):
 def game_loop():
     player = {
         "name": name,
-        "archetype": "Backend Sage",  # This can be customized
+        "archetype": archetype,  # This can be customized
         "health": 100,
         "energy": 50,
         "skill_points": 10
