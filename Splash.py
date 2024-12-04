@@ -1,8 +1,17 @@
 import requests
 import json
 import time
+import os
+from dotenv import load_dotenv
 
-KEY = "AIzaSyA3dsSFAb8rvjSBdZ__WLDYwhTYKEfWpNw"
+# Load the .env file
+load_dotenv()
+
+# Retrieve the value of a key
+KEY = os.getenv("KEY")
+debug = os.getenv("DEBUG")
+
+#KEY = "AIzaSyA3dsSFAb8rvjSBdZ__WLDYwhTYKEfWpNw"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent"
 
 
