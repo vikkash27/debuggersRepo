@@ -13,7 +13,11 @@ print("""
         An RPG Adventure Through the World of Code!          
 ============================================================
 
-
+            🌟 Choose Your Developer Archetype 🌟
+#    [1] Backend Sage - Master of APIs and Databases.
+#    [2] Frontend Sorcerer - Weaver of Interfaces and UX.
+#    [3] DevOps Monk - Keeper of CI/CD Rituals.
+#    [4] QA Rogue - Hunter of Bugs and Breakpoints.
 
                 🌐 Your Journey Awaits... 🌐
 ------------------------------------------------------------
